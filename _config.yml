@@ -79,5 +79,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:zhangjie0072/OrangeSite.git
+  repo: git@github.com:zhangjie0072/zhangjie0072.github.io.git
   branch: gh-pages
