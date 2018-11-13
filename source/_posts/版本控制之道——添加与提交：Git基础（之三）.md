@@ -320,34 +320,34 @@ git commit命令必须提交留言。 可以使用一个或多个-m。
     </html>
    ```
 
-   #### 第四节 管理文件
+#### 第四节 管理文件
 
-   1. 文件重命名和移动 git mv <原文件名> <新文件名>，该命令告诉Git使用原文件的内容来创建新文件，新文件保留原文件的历史修改记录，并删除原文件。
+1. 文件重命名和移动 git mv <原文件名> <新文件名>，该命令告诉Git使用原文件的内容来创建新文件，新文件保留原文件的历史修改记录，并删除原文件。
 
-   ```
-   $ git mv index.html hello.html
+```
+$ git mv index.html hello.html
    
-   Orange@DESKTOP-8VK4FUU MINGW64 /d/MyGit/mysite (master)
-   $ git status
-   On branch master
-   Changes to be committed:
-     (use "git reset HEAD <file>..." to unstage)
+Orange@DESKTOP-8VK4FUU MINGW64 /d/MyGit/mysite (master)
+$ git status
+On branch master
+Changes to be committed:
+	(use "git reset HEAD <file>..." to unstage)
    
-           renamed:    index.html -> hello.html
+        renamed:    index.html -> hello.html
    
-   Changes not staged for commit:
-     (use "git add <file>..." to update what will be committed)
-     (use "git checkout -- <file>..." to discard changes in working directory)
+	Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git checkout -- <file>..." to discard changes in working directory)
    
-           modified:   hello.html
-   ```
+        modified:   hello.html
+```
 
-   2. git并不跟踪管理文件，而是跟踪文件内容。理由：文件名只是附在文件内容上的元数据，以便比较容易地组织文件目录树。Git可以询问文件系统以获得文件名，但Git真正关心的是文件本身的内容。
+2. git并不跟踪管理文件，而是跟踪文件内容。理由：文件名只是附在文件内容上的元数据，以便比较容易地组织文件目录树。Git可以询问文件系统以获得文件名，但Git真正关心的是文件本身的内容。
 
-      既然Git仅跟踪文件内容，那么他是如何管理文件复制的呢？实际上，无需额外告诉Git存在文件复制，Git自己就可以监测到他。
+既然Git仅跟踪文件内容，那么他是如何管理文件复制的呢？实际上，无需额外告诉Git存在文件复制，Git自己就可以监测到他。
 
-   3. 忽略文件
+3. 忽略文件
 
-      .gitignore 来设置版本库级别的忽略； .git/info/exclude来设置本地级别的忽略。
+.gitignore 来设置版本库级别的忽略； .git/info/exclude来设置本地级别的忽略。
 
-      完结（2018.11.12）
+完结（2018.11.12）
